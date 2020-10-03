@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @var \App\Entity\User $item
+ * @var \Yiisoft\Router\UrlGeneratorInterface $urlGenerator
+ * @var \Yiisoft\View\WebView $this
+ */
+
+use Yiisoft\Html\Html;
+
+echo Html::tag('h1', Html::encode($item->getLogin()));
+?>
+<div>
+    <span class="text-muted">Created at <?= $item->getCreatedAt()->format('H:i:s d.m.Y') ?></span>
+</div>

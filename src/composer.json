@@ -1,0 +1,125 @@
+{
+    "name": "yiisoft/yii-demo",
+    "type": "project",
+    "description": "Yii Framework Project Demo",
+    "keywords": [
+        "yii",
+        "app"
+    ],
+    "homepage": "https://github.com/yiisoft/yii-demo",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/yiisoft/yii-demo",
+        "issues": "https://github.com/yiisoft/yii-demo/issues",
+        "wiki": "https://github.com/yiisoft/yii-demo/wiki",
+        "forum": "http://www.yiiframework.com/forum/"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4|^8.0",
+        "cebe/markdown": "^1.2@dev",
+        "cycle/proxy-factory": "^1.2",
+        "nyholm/psr7": "^1.0",
+        "psr/log": "^1.1",
+        "yiisoft/access": "^1.0",
+        "yiisoft/aliases": "^1.0",
+        "yiisoft/arrays": "^3.0@dev",
+        "yiisoft/assets": "^1.0@dev",
+        "yiisoft/auth": "^1.0",
+        "yiisoft/cache": "^3.0@dev",
+        "yiisoft/cache-file": "^3.0@dev",
+        "yiisoft/composer-config-plugin": "^1.0@dev",
+        "yiisoft/csrf": "^3.0@dev",
+        "yiisoft/data": "^3.0@dev",
+        "yiisoft/data-response": "^3.0@dev",
+        "yiisoft/di": "^3.0@dev",
+        "yiisoft/factory": "^3.0@dev",
+        "yiisoft/form": "^1.0@dev",
+        "yiisoft/html": "^3.0@dev",
+        "yiisoft/injector": "^1.0",
+        "yiisoft/log": "^3.0@dev",
+        "yiisoft/log-target-file": "^3.0@dev",
+        "yiisoft/mailer": "^3.0@dev",
+        "yiisoft/mailer-swiftmailer": "^3.0@dev",
+        "yiisoft/rbac": "^3.0@dev",
+        "yiisoft/rbac-php": "^3.0@dev",
+        "yiisoft/router": "^3.0@dev",
+        "yiisoft/router-fastroute": "^3.0@dev",
+        "yiisoft/security": "^3.0@dev",
+        "yiisoft/serializer": "^3.0@dev",
+        "yiisoft/strings": "^1.0",
+        "yiisoft/var-dumper": "^3.0@dev",
+        "yiisoft/view": "^3.0@dev",
+        "yiisoft/widget": "^3.0@dev",
+        "yiisoft/yii-bootstrap4": "^3.0@dev",
+        "yiisoft/yii-console": "^3.0@dev",
+        "yiisoft/yii-cycle": "^3.0@dev",
+        "yiisoft/yii-debug": "^3.0@dev",
+        "yiisoft/yii-debug-api": "^3.0@dev",
+        "yiisoft/yii-event": "^3.0@dev",
+        "yiisoft/yii-swagger": "^3.0@dev",
+        "yiisoft/yii-view": "^3.0@dev",
+        "yiisoft/yii-web": "^3.0@dev"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "fzaninotto/faker": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "App\\Installer::postUpdate"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        },
+        "config-plugin-output-dir": "runtime/build/config",
+        "config-plugin": {
+            "common": "config/common.php",
+            "params": [
+                "config/params.php",
+                "?config/params-local.php"
+            ],
+            "web": [
+                "$common",
+                "config/web.php"
+            ],
+            "console": [
+                "$common",
+                "config/console.php"
+            ],
+            "events": "config/events.php",
+            "events-web": [
+                "$events",
+                "config/events-web.php"
+            ],
+            "events-console": [
+                "$events",
+                "config/events-console.php"
+            ],
+            "providers": "config/providers.php",
+            "providers-web": [
+                "$providers",
+                "config/providers-web.php"
+            ],
+            "providers-console": [
+                "$providers",
+                "config/providers-console.php"
+            ],
+            "routes": "config/routes.php"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
