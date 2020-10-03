@@ -27,10 +27,12 @@ yiidock_nginx_1        nginx -g daemon off;             Up      0.0.0.0:80->80/t
 yiidock_phpmyadmin_1   /docker-entrypoint.sh apac ...   Up      80/tcp 
 ```
 
-Before acceess service, wait until `composer install` done. 
+Before acceess service, don't forget to execute `composer install` in app container. 
 
 ```
-docker-compose logs -f app
+docker-compose exec app sh
+
+composer install
 ```
 
 ## Available service:

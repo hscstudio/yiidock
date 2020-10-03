@@ -39,7 +39,7 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./conf/app.conf:/usr/local/etc/php-fpm.d/www.conf
-    command: "composer install"
+    command: ""
     expose: 
       - 9000
     networks:
