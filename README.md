@@ -4,11 +4,13 @@ Pre Configuration Docker for Development Yii 3.0 + MySQL
 
 ## Getting started
 
-instal Yii3 demo 
+Clone Yii3 demo to folder src
 
 ```
 git clone https://github.com/yiisoft/yii-demo.git src
 ```
+
+Then, build image
 
 ```sh
 docker-compose up --build
