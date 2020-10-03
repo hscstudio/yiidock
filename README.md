@@ -30,7 +30,7 @@ yiidock_phpmyadmin_1   /docker-entrypoint.sh apac ...   Up      80/tcp
 Before acceess service, wait until `composer install` done. 
 
 ```
-docker-compose logs -f yiidock_app_1
+docker-compose logs -f app
 ```
 
 ## Available service:
