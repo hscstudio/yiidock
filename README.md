@@ -1,6 +1,6 @@
-# GoDockRest 
+# YiiDock 
 
-Pre Configuration Docker for Golang Restful with Echo + MySQL
+Pre Configuration Docker for Development Yii 3.0 + MySQL
 
 ## Getting started
 
@@ -11,22 +11,19 @@ docker-compose up --build
 You can check service with execute: `docker-compose ps`
 
 ```
-      Name                     Command               State                 Ports              
-----------------------------------------------------------------------------------------------
-rest_app_1          go run ./app/server.go           Up      81/tcp                           
-rest_mysql_1        docker-entrypoint.sh mysqld      Up      0.0.0.0:3306->3306/tcp, 33060/tcp
-rest_nginx_1        nginx -g daemon off;             Up      0.0.0.0:80->80/tcp               
-rest_phpmyadmin_1   /docker-entrypoint.sh apac ...   Up      80/tcp  
+        Name                      Command               State                 Ports              
+-------------------------------------------------------------------------------------------------
+yiidock_app_1          docker-php-entrypoint php-fpm    Up      9000/tcp                         
+yiidock_mysql_1        docker-entrypoint.sh mysqld      Up      0.0.0.0:3306->3306/tcp, 33060/tcp
+yiidock_nginx_1        nginx -g daemon off;             Up      0.0.0.0:80->80/tcp               
+yiidock_phpmyadmin_1   /docker-entrypoint.sh apac ...   Up      80/tcp 
 ```
 
 ## Available service:
 
 - GET http://localhost
-- GET http://localhost/articles
 
 ![](screenshoot.png)
-
-- GET http://localhost/articles/1
 
 - GET http://localhost/phpmyadmin
 
