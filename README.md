@@ -1,13 +1,13 @@
 # YiiDock 
 
-Pre Configuration Docker for Development Yii 3.0 + MySQL
+Pre Configuration Docker for Development Yii + MySQL
 
 ## Getting started
 
-Clone Yii3 demo to folder src
+Create project to folder src
 
 ```
-git clone https://github.com/yiisoft/yii-demo.git src
+composer create-project --prefer-dist yiisoft/yii2-app-basic src
 ```
 
 Then, build image
@@ -39,8 +39,6 @@ composer install
 
 - GET http://localhost
 
-![](screenshoot.png)
-
 - GET http://localhost/phpmyadmin
 
 ## Usage
@@ -51,6 +49,5 @@ To check error You can execute `docker-compose logs -f app`
 
 ## Readmore
 
-- https://echo.labstack.com/guide
 
 
