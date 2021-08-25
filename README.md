@@ -4,9 +4,17 @@ Pre Configuration Docker for Development Yii + MySQL
 
 ## Getting started
 
-Create project to folder src
+Clone this repo 
 
 ```
+git clone https://github.com/hscstudio/yiidock.git
+```
+
+
+at folder `yiidock`, create project to folder `src`
+
+```
+cd yiidock
 composer create-project --prefer-dist yiisoft/yii2-app-basic src
 ```
 
